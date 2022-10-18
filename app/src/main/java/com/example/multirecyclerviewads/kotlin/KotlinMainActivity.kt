@@ -57,7 +57,7 @@ class KotlinMainActivity : AppCompatActivity() {
 
         rvKotlinMain = binding.rvKotlinMain
         rvKotlinMain?.setHasFixedSize(true)
-        rvKotlinMain?.layoutManager = GridLayoutManager(this,1)
+        rvKotlinMain?.layoutManager = getKotlinAdjustedGridLayoutManager(this)
         kotlinAdapter = KotlinAdapter(this, kotlinArrayList?:return)
         rvKotlinMain?.adapter = kotlinAdapter
     }
@@ -72,11 +72,11 @@ class KotlinMainActivity : AppCompatActivity() {
                     // 1 Means that it will take only cell for each item
                     // Now, our GridLayoutManager is of 2 cells, so each row
                     // will show 2 cells.
-                    KotlinAdapter.AD_VIEW -> 1
+                    KotlinAdapter.ITEM_VIEW -> 1
 
                     // Show Full Width single item when its footer
                     // 2 means it will take 2 cells to create one full width cell.
-                    KotlinAdapter.ITEM_VIEW -> 2
+                    KotlinAdapter.AD_VIEW -> 2
 
                     else -> 1
                 }
