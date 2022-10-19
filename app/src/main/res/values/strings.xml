@@ -2,4 +2,9 @@
     <string name="app_name">MultiRecyclerViewAds</string>
 
     <string name="maxBanner">232324</string>
+    <string name="admobNative">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="admobInterstitial">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admobRewarded">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="admobBanner">ca-app-pub-3940256099942544/9214589741</string>
+    <string name="admobAppOpen">ca-app-pub-3940256099942544/3419835294</string>
 </resources>

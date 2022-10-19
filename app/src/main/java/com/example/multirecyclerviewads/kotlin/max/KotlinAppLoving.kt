@@ -15,11 +15,6 @@ class KotlinAppLoving : AppCompatActivity() {
         binding = ActivityAppLovinBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        AppLovinSdk.getInstance(this).mediationProvider = "max"
-        AppLovinSdk.initializeSdk(this) { }
-
-
         MaxBanner.loadMaxBanner(this, getString(R.string.maxBanner), binding.kotlinMaxAd)
 
 

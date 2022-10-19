@@ -151,7 +151,7 @@ class KotlinAdapter(val activity: Activity, val kotlinArrayList: ArrayList<Kotli
         }
 
         fun bindAdData() {
-            val builder = AdLoader.Builder(activity, "ca-app-pub-3940256099942544/2247696110")
+            val builder = AdLoader.Builder(activity, activity.getString(R.string.admobNative))
                 .forNativeAd { nativeAd: NativeAd? ->
                     val nativeAdView = activity.layoutInflater
                         .inflate(R.layout.full_native_layout, null) as NativeAdView
