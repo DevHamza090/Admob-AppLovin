@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.multirecyclerviewads.R
 import com.example.multirecyclerviewads.databinding.AdapterItemBinding
 import com.example.multirecyclerviewads.databinding.NativeAdContainerBinding
+import com.example.multirecyclerviewads.kotlin.admob.AdmobAdaptiveBanner
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
@@ -167,6 +168,8 @@ class KotlinAdapter(val activity: Activity, val kotlinArrayList: ArrayList<Kotli
                 }
             }).build()
             adLoader.loadAd(AdRequest.Builder().build())
+
+//            AdmobAdaptiveBanner(activity,binding.adLayout,activity.getString(R.string.admobBanner))
         }
     }
 

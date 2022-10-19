@@ -18,8 +18,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -56,6 +63,8 @@ dependencies {
 
 
     implementation 'com.applovin:applovin-sdk:11.5.3'
+    implementation 'com.applovin.mediation:facebook-adapter:6.12.0.0'
+    implementation 'com.applovin.mediation:unityads-adapter:4.4.1.0'
 /*    implementation 'com.applovin.mediation:google-adapter:+'
     implementation 'com.applovin.mediation:facebook-adapter:+'
     implementation 'com.applovin.mediation:unityads-adapter:+'*/

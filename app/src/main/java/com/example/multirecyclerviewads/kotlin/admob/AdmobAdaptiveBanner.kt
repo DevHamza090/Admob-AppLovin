@@ -1,12 +1,14 @@
 package com.example.multirecyclerviewads.kotlin.admob
 
 import android.app.Activity
+import android.content.IntentFilter
 import android.util.DisplayMetrics
 import android.util.Log
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import com.google.android.gms.ads.*
 
-class AdmobAdaptiveBanner(val activity: Activity,val ad_view_container:LinearLayout,val admobBannerId:String) {
+class AdmobAdaptiveBanner(val activity: Activity,val ad_view_container:FrameLayout,val admobBannerId:String) {
     var adView: AdView?= null
     private var initialLayoutComplete = false
     val TAG = "AdaptiveBanner"
@@ -45,6 +47,7 @@ class AdmobAdaptiveBanner(val activity: Activity,val ad_view_container:LinearLay
 
         // Create an ad request.
         val adRequest = AdRequest.Builder().build()
+
 
         // Start loading the ad in the background.
         ad_view_container.addView(adView)

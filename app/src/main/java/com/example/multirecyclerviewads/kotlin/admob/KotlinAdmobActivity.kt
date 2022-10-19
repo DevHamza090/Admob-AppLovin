@@ -32,7 +32,7 @@ class KotlinAdmobActivity : AppCompatActivity(), AdmobInterstitialLoadListeners 
 
         AdmobRewarded.loadRewardedAd(this,getString(R.string.admobRewarded))
 
-        val bannerContainer = findViewById<LinearLayout>(R.id.admobBannerContainer)
+        val bannerContainer = findViewById<FrameLayout>(R.id.admobBannerContainer)
         AdmobAdaptiveBanner(this,bannerContainer,getString(R.string.admobBanner))
 
 

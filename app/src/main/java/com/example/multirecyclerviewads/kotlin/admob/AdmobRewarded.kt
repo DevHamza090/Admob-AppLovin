@@ -24,7 +24,7 @@ object AdmobRewarded {
 
         if (mRewardedAd == null) {
             mIsLoading = true
-            var adRequest = AdRequest.Builder().build()
+            val adRequest = AdRequest.Builder().build()
 
             RewardedAd.load(
                 activity,
