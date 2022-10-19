@@ -4,9 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.multirecyclerviewads.databinding.ActivityMainBinding
-import com.example.multirecyclerviewads.databinding.NativeAdContainerBinding
 import com.example.multirecyclerviewads.java.JavaMainActivity
-import com.example.multirecyclerviewads.kotlin.KotlinMainActivity
+import com.example.multirecyclerviewads.kotlin.admob_recycler.KotlinMainActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -20,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnKotlin.setOnClickListener {
-            startActivity(Intent(this,KotlinMainActivity::class.java))
+            startActivity(Intent(this, KotlinMainActivity::class.java))
         }
 
 

@@ -47,5 +47,18 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'com.google.android.gms:play-services-ads:21.3.0'
+    // implementation 'com.google.ads.mediation:facebook:6.11.0.1'
+
+    implementation 'com.applovin:applovin-sdk:11.5.3'
+/*    implementation 'com.applovin.mediation:google-adapter:+'
+    implementation 'com.applovin.mediation:facebook-adapter:+'
+    implementation 'com.applovin.mediation:unityads-adapter:+'*/
+
+
+
+    //https://dash.applovin.com/documentation/mediation/android/mediation-adapters
+
+
+
 
 }

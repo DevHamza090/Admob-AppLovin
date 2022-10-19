@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kotlin.admob_recycler.KotlinMainActivity">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvKotlinMain"
+    tools:context=".kotlin.max.KotlinAppLoving">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/kotlinMaxAd"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

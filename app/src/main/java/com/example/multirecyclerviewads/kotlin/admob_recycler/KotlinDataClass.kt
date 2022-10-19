@@ -1,4 +1,4 @@
-package com.example.multirecyclerviewads.kotlin
+package com.example.multirecyclerviewads.kotlin.admob_recycler
 
 import java.util.*
 

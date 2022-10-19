@@ -1,4 +1,4 @@
-package com.example.multirecyclerviewads.kotlin
+package com.example.multirecyclerviewads.kotlin.admob_recycler
 
 import android.content.Context
 import android.os.Bundle
@@ -62,7 +62,7 @@ class KotlinMainActivity : AppCompatActivity() {
         rvKotlinMain?.adapter = kotlinAdapter
     }
 
-    fun getKotlinAdjustedGridLayoutManager(context: Context): GridLayoutManager {
+    private fun getKotlinAdjustedGridLayoutManager(context: Context): GridLayoutManager {
         val layoutManager = GridLayoutManager(context, 2)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {

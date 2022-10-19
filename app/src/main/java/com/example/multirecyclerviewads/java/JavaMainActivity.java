@@ -7,13 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.example.multirecyclerviewads.R;
 import com.example.multirecyclerviewads.databinding.ActivityJavaMainBinding;
-import com.example.multirecyclerviewads.kotlin.KotlinDataClass;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class JavaMainActivity extends AppCompatActivity {
     ActivityJavaMainBinding binding;

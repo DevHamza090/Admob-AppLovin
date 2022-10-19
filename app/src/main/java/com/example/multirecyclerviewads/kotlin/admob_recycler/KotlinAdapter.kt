@@ -1,4 +1,4 @@
-package com.example.multirecyclerviewads.kotlin
+package com.example.multirecyclerviewads.kotlin.admob_recycler
 
 import android.app.Activity
 import android.util.Log
@@ -18,7 +18,8 @@ import com.google.android.gms.ads.nativead.NativeAd
 import com.google.android.gms.ads.nativead.NativeAdView
 import java.text.SimpleDateFormat
 
-class KotlinAdapter ( val activity : Activity,  val kotlinArrayList: ArrayList<KotlinDataClass>):RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class KotlinAdapter(val activity: Activity, val kotlinArrayList: ArrayList<KotlinDataClass>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -49,6 +50,7 @@ class KotlinAdapter ( val activity : Activity,  val kotlinArrayList: ArrayList<K
             kotlinArrayList.size + Math.round((kotlinArrayList.size / ITEM_FEED_COUNT).toFloat())
         } else kotlinArrayList.size
     }
+
     override fun getItemViewType(position: Int): Int {
         return if ((position + 1) % ITEM_FEED_COUNT == 0) {
             AD_VIEW
@@ -126,7 +128,7 @@ class KotlinAdapter ( val activity : Activity,  val kotlinArrayList: ArrayList<K
         adView.setNativeAd(nativeAd)
     }
 
-   inner class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var binding: AdapterItemBinding
 
         init {
@@ -141,7 +143,7 @@ class KotlinAdapter ( val activity : Activity,  val kotlinArrayList: ArrayList<K
         }
     }
 
-   inner class AdViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class AdViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var binding: NativeAdContainerBinding
 
         init {
@@ -151,9 +153,9 @@ class KotlinAdapter ( val activity : Activity,  val kotlinArrayList: ArrayList<K
         fun bindAdData() {
             val builder = AdLoader.Builder(activity, "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd { nativeAd: NativeAd? ->
-                    val nativeAdView = activity.getLayoutInflater()
+                    val nativeAdView = activity.layoutInflater
                         .inflate(R.layout.full_native_layout, null) as NativeAdView
-                    populateNativeADView(nativeAd?:return@forNativeAd, nativeAdView)
+                    populateNativeADView(nativeAd ?: return@forNativeAd, nativeAdView)
                     binding.adLayout.removeAllViews()
                     binding.adLayout.addView(nativeAdView)
                     Log.d("loadNativeRecyclerView", "onAdLoaded")
@@ -168,7 +170,7 @@ class KotlinAdapter ( val activity : Activity,  val kotlinArrayList: ArrayList<K
         }
     }
 
-    companion object{
+    companion object {
         const val ITEM_VIEW = 0
         const val AD_VIEW = 1
         const val ITEM_FEED_COUNT = 9
